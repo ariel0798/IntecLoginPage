@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntecLoginPage.LoginPage" >
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Login" IconImageSource="accessibility.png">
+        <Grid VerticalOptions="Center"
+              HorizontalOptions="FillAndExpand"
+              Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Image Source="Intec.png" Grid.Column="0" Grid.Row="0" WidthRequest="200" HeightRequest="200"/>
+            <Entry x:Name="emailEntry" Placeholder="Email" Grid.Column="0" Grid.Row="1"/>
+            <Entry x:Name="passwordEntry" Placeholder="Password" Grid.Column="0" Grid.Row="2"  IsPassword="true"/>
+            <Button  Grid.Column="0" Grid.Row="3" Text="Login" TextColor="White" BackgroundColor="Red" Clicked="ButtonClicked"/>
+            <Label  x:Name="registroLabel" Grid.Column="0" Grid.Row="4" Text="Registro" TextColor="red" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+
+
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Home" IconImageSource="home.png"/>
+</TabbedPage>

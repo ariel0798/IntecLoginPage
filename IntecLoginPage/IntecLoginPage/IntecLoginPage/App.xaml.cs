@@ -10,7 +10,10 @@ namespace IntecLoginPage
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage()
+            {
+                BackgroundColor = Color.White
+            });
         }
 
         protected override void OnStart()

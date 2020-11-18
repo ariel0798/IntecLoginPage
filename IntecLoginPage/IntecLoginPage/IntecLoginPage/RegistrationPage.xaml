@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntecLoginPage.RegistrationPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center"
+              HorizontalOptions="FillAndExpand"
+              Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Image Source="Intec.png" Grid.Column="0" Grid.Row="0" WidthRequest="200" HeightRequest="200"/>
+            <Entry x:Name="nameEntry" Placeholder="Name" Grid.Column="0" Grid.Row="1"  />
+            <Entry x:Name="emailEntry" Placeholder="Email" Grid.Column="0" Grid.Row="2"/>
+            <Entry x:Name="passwordEntry" Placeholder="Password" Grid.Column="0" Grid.Row="3"  IsPassword="true"/>
+            <Entry x:Name="confirmPasswordEntry" Placeholder="Confirm password" Grid.Column="0" Grid.Row="4"  IsPassword="true"/>
+            <Button  Grid.Column="0" Grid.Row="5" Text="Register" TextColor="White" BackgroundColor="Red" Clicked="ButtonClicked"/>
+            
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
