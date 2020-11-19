@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -16,7 +14,6 @@ namespace IntecLoginPage
         {
             InitializeComponent();
             RegistroLabelClicked();
-
         }
 
         void RegistroLabelClicked()
@@ -54,8 +51,8 @@ namespace IntecLoginPage
                     if (lineArray[1].ToLower() == emailEntry.Text.ToLower() && passwordEntry.Text == lineArray[2])
                     {
                         foundUser = true;
-                        await DisplayAlert("Bienvenido", lineArray[0], "Ok");
-                        // ir a la otra pantalla de master detail o algo asi
+                        await DisplayAlert("Bienvenido", lineArray[0] +", ahora iras a la pagina master detail ", "Ok");
+                        await Navigation.PushAsync(new MasterDetailPageXample());
                     }
                 }
 

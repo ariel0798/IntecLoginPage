@@ -29,5 +29,8 @@
 
         </Grid>
     </ContentPage>
-    <ContentPage Title="Home" IconImageSource="home.png"/>
+    <ContentPage Title="Home" IconImageSource="home.png">
+
+        <Label Text="This is home screen" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+    </ContentPage>
 </TabbedPage>

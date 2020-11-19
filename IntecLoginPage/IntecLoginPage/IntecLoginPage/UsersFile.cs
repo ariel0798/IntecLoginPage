@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System;
 
 namespace IntecLoginPage
 {
@@ -9,7 +10,10 @@ namespace IntecLoginPage
     {
         public static List<string> GetUserList()
         {
-            string filePath = "Users.txt";
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.txt");
+
+            if (!File.Exists(filePath))
+                File.CreateText(filePath);
 
             List<string> lines = File.ReadAllLines(filePath).ToList();
 
@@ -18,7 +22,10 @@ namespace IntecLoginPage
 
         public static void AddLines(List<string> lines)
         {
-            string filePath = "Users.txt";
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.txt");
+
+            if (!File.Exists(filePath))
+                File.CreateText(filePath);
 
             File.WriteAllLines(filePath, lines);
         }
