@@ -1,7 +1,7 @@
 ## IntecLoginPage
 A login page and registration page of a university. Plus a master detail page example.
 
-#Validation
+# Validation
 
 It has validations not to leave empty texts.
 
